@@ -1,5 +1,5 @@
 $.Tabs = function (el) {
-  var that = this;
+  // var that = this;
   this.$el = $(el);
   this.$contentTabs = $(this.$el.attr("data-content-tabs"));
   this.$activeTab = $(this.$contentTabs.find(".active"));
@@ -17,11 +17,11 @@ $.Tabs.prototype.clickTab = function (e){
   this.$activeTab.addClass("transitioning");
   this.$activeTab.one("transitionend", function(){
     this.$activeTab.removeClass("transitioning");
-    this.$activeTab = $(this.$contentTabs.find("#"+$current.text()));
+    this.$activeTab = $(this.$contentTabs.find($current.attr('href')));
     this.$activeTab.addClass("active");
     this.$activeTab.addClass("transitioning");
     setTimeout(function(){
-      this.$activeTab.removeClass("transitioning");
+      this.$activeTab.removeClass("transitioning");//.addClass("active");
     }.bind(this), 0);
   }.bind(this));
   //Add classes and reset $activeTab
