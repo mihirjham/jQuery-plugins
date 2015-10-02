@@ -11,3 +11,46 @@ h1, h2, p, strong, em, a {
   color: inherit;
   background: transparent;
 }
+
+.thumbnails {
+  width: 400px;
+}
+
+div.gutter{
+  position: relative;
+}
+
+div.gutter-images{
+  width:90%;
+  position: relative;
+  left: 5%;
+}
+
+div.gutter-images > img {
+  width: 20%;
+  display: block;
+  float: left;
+}
+
+div.active > img {
+  width: 100%;
+}
+
+a.nav{
+  width: 5%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  text-decoration: none;
+}
+
+a.r{
+  left: 95%;
+}
+
+.clearfix {
+  clear: both;
+  content: "";
+  display: block;
+}
